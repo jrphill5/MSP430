@@ -57,13 +57,13 @@ int main()
 	__enable_interrupt();
 
 	int i, j;
-	while( 1 ) for( j = 0x00 - LCDCOL/6; j < 0x80; j++ )
+	while( 1 ) for( j = 0x00 - LCDCOL/6*LCDROW/8; j < 0x80; j++ )
 	{
 		LCD_set_coord( 0, 0 );
-		for( i = j; i < j + LCDCOL/6; i++ )
+		for( i = j; i < j + LCDCOL/6*LCDROW/8; i++ )
 			if( i < 0x00 || i > 0x7F ) LCD_send_char( ' ' );
 			else                       LCD_send_char( i );
-		delay_ms(100);
+		delay_ms(5);
 	}
 
 }
