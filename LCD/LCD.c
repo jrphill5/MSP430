@@ -1,6 +1,5 @@
 // Nokia 5110 48x84 LCD Screen
 
-//#include <msp430g2553.h>
 #include <msp430.h>
 #include "font8x6.h"
 
