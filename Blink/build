@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PROJECT=blink
+
+msp430-gcc -mmcu=msp430g2553 -o $PROJECT.hex $PROJECT.c
+if [ "$?" -eq "0" ]; then mspdebug -q rf2500 "prog $PROJECT.hex"; fi
