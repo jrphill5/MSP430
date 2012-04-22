@@ -1,0 +1,15 @@
+Nokia 5110 LCD Instruction Set
+
+0 0000 0000		NOP
+0 0010 0PVH		P (power down), V (vertical addressing), H (extended instruction set)
+1 XXXX XXXX		Write data
+
+Basic Instruction Set
+0 0000 1D0E		DE (00 - all off, 10 - normal, 01 - all on, 11 - inverse)
+0 0100 0YYY		Set Y RAM address
+0 1XXX XXXX		SET X RAM address
+
+Advanced Instruction Set
+0 0000 01TT		Set temperature coefficient
+0 0001 0BBB		Set bias system
+0 1VVV VVVV		Set Vop
